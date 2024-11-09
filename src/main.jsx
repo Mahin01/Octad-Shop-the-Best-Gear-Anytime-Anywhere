@@ -6,7 +6,7 @@ import { router } from './routes/MainRoutes';
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <div className="w-screen px-10">
+    <div className="w-screen">
       <RouterProvider router={router} />
     </div>
   </React.StrictMode>
