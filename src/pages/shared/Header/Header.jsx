@@ -26,7 +26,8 @@ const Header = () => {
             </div>
             </div>
             <NavMenu></NavMenu>
-        </>
+            <hr />
+            </>
     );
 };
 
