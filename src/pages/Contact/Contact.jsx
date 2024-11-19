@@ -6,8 +6,8 @@ import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 const Contact = () => {
     return (
         <>
-            <div className="max-w-screen-xl mx-auto flex min-h-screen">
-                <div className="card my-auto">
+            <div className="flex flex-col md:flex-row lg:items-center justify-center">
+                <div className="card">
                     <div class="card-body">
                         <div className="max-w-sm mx-auto p-4 py-20 bg-white border border-gray-200 shadow-lg rounded-lg">
                         {/* Phone Section */}
@@ -42,12 +42,10 @@ const Contact = () => {
                             </div>
                         </div>
                         </div>
-
                     </div>
                 </div>
-                <div className="card my-auto mx-auto bg-white border border-gray-200 shadow-lg rounded-lg">
-                        <div className="card-body">
-                            <form>
+                <div className="card bg-white border border-gray-200 shadow-lg rounded-lg">
+                            <form className='card-body'>
                                 <div className="flex items-center">
                                     <div className="form-control mb-5 mr-4">
                                         <label className="input bg-base-200 flex items-center gap-2">
@@ -74,7 +72,6 @@ const Contact = () => {
                             </form>
                         </div>
                     </div>
-                </div>
         </>
     );
 };

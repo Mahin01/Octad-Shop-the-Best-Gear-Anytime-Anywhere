@@ -6,7 +6,7 @@ import "./Home.css";
 const Home = () => {
     return (
         <div className="max-w-screen-xl mx-auto">
-            <div class="flex min-h-auto overflow-hidden">
+            <div class="flex min-h-auto">
                 <SideBar></SideBar>
                 <Banner></Banner>
             </div>
