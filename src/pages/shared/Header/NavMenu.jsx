@@ -39,8 +39,8 @@ const NavMenu = () => {
                     <div className="form-control">
                         <div class="relative">
                             <input type="search" name="q" class="input input-bordered text-sm rounded w-24 md:w-auto h-8 outline-none focus:outline-none" placeholder="Search..." autocomplete="off" />
-                            <span class="absolute inset-y-0 right-0 flex items-center">
-                                <button type="submit">
+                            <span class="absolute inset-y-0 right-0 flex items-center pr-2">
+                                <button type="submit" class="p-1">
                                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-4 h-4"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                                 </button>
                             </span>
