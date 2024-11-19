@@ -10,10 +10,10 @@ const My_Account = () => {
                         <h2 className="text-lg font-bold mb-2">Manage My Account</h2>
                         <ul className="space-y-2">
                             <li>
-                                <a href="#" className="text-blue-600 hover:underline">My Profile</a>
+                                <a href="#" className="text-gray-700 hover:underline">My Profile</a>
                             </li>
                             <li>
-                                <a href="#" className="text-blue-600 hover:underline">Payment Method</a>
+                                <a href="#" className="text-gray-700 hover:underline">Payment Method</a>
                             </li>
                         </ul>
                     </div>
@@ -21,31 +21,31 @@ const My_Account = () => {
                         <h2 className="text-lg font-bold mb-2">Manage Orders</h2>
                         <ul className="space-y-2">
                             <li>
-                                <a href="#" className="text-blue-600 hover:underline">My Returns</a>
+                                <a href="#" className="text-gray-700 hover:underline">My Returns</a>
                             </li>
                             <li>
-                                <a href="#" className="text-blue-600 hover:underline">My Cancellations</a>
+                                <a href="#" className="text-gray-700 hover:underline">My Cancellations</a>
                             </li>
                         </ul>
                     </div>
                     <div className="manage_wishlist">
-                        <a href="#" className="hover:underline">My Wishlist</a>
+                        <a href="#" className="font-bold text-lg hover:underline">My Wishlist</a>
                     </div>
                 </aside>
 
                 {/* Card Content */}
-                <main className="flex-1 bg-white p-6 border shadow-sm rounded-lg">
+                <main className="flex-1 bg-white p-8 border shadow-sm rounded-lg">
                     <h2 className="text-xl mb-5 font-bold">Edit Your Profile Info</h2>
                     <form>
                         {/* Name Fields */}
                         <div className="flex mb-4 gap-4">
                             <div className="form-control w-1/2">
                                 <label className="mb-2 text-sm font-bold">First Name</label>
-                                <input className="input w-full bg-base-200 p-2 border rounded" type="text"/>
+                                <input className="input w-full bg-base-200 border rounded" type="text"/>
                             </div>
                             <div className="form-control w-1/2">
                                 <label className="mb-2 text-sm font-bold">Last Name</label>
-                                <input className="input w-full bg-base-200 p-2 border rounded"  type="text" />
+                                <input className="input w-full bg-base-200 border rounded"  type="text" />
                             </div>
                         </div>
 
@@ -53,19 +53,19 @@ const My_Account = () => {
                         <div className="flex gap-4 mt-4">
                             <div className="form-control w-1/2">
                                 <label className="mb-2 text-sm font-bold">Email</label>
-                                <input className="input w-full bg-base-200 p-2 border rounded" type="email"/>
+                                <input className="input w-full bg-base-200 border rounded" type="email"/>
                             </div>
                             <div className="form-control w-1/2">
                                 <label className="mb-2 text-sm font-bold">Address</label>
-                                <input className="input w-full bg-base-200 p-2 border rounded" type="text" />
+                                <input className="input w-full bg-base-200 border rounded" type="text" />
                             </div>
                         </div>
                         {/* Password Change Fields */}
                         <div className="form-control mt-6">
                             <label className="mb-2 text-sm font-bold">Change Password</label>
-                            <input className="input w-full bg-base-200 mb-2 p-2 border rounded" type="password" placeholder="Current Password"/>
-                            <input className="input w-full bg-base-200 mb-2 p-2 border rounded" type="password" placeholder="New Password"/>
-                            <input className="input w-full bg-base-200 p-2 border rounded" type="password" placeholder="Re-type Password"/>
+                            <input className="input w-full bg-base-200 mb-2 border rounded" type="password" placeholder="Current Password"/>
+                            <input className="input w-full bg-base-200 mb-2 border rounded" type="password" placeholder="New Password"/>
+                            <input className="input w-full bg-base-200 border rounded" type="password" placeholder="Re-type Password"/>
                         </div>
                         {/* Buttons */}
                         <div className="flex justify-end mt-4 gap-2">
