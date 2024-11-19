@@ -7,34 +7,29 @@ const Footer = () => {
                 <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-5">
                 {/* Column 1 */}
                 <div className="space-y-4">
-                    <h3 className="text-lg font-bold">Exclusive</h3>
-                    <p className="text-sm">Subscribe</p>
+                    <h3 className="text-xl font-bold">Octad</h3>
+                    <p className="text-lg">Subscribe</p>
                     <p className="text-sm">Get 10% off your first order</p>
                     <form className="flex items-center">
-                    <input
-                        type="email"
-                        placeholder="Enter your email"
-                        className="p-2 rounded-l bg-gray-800 text-white outline-none"
-                    />
-                    <button className="p-2 bg-primary rounded-r">
-                        <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-5 w-5"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        >
-                        <path d="M10 3a1 1 0 011 1v10.586l3.293-3.293a1 1 0 111.414 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 011.414-1.414L9 14.586V4a1 1 0 011-1z"></path>
-                        </svg>
-                    </button>
+                        <div className="relative">
+                        <input type="email" placeholder="Enter your email" className="p-1 text-sm rounded-l bg-gray-800 text-white outline-none"/>
+                        <span class="absolute inset-y-0 right-0 flex items-center">
+                            <button type="submit" class="p-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewBox="0 0 24 24" fill="none" class="w-4 h-4">
+                                <path d="M2.5 2.5L21.5 11.5C22 11.75 22 12.25 21.5 12.5L2.5 21.5C2 21.75 1.5 21.5 1.5 21L2.5 14.5L14.5 12L2.5 9.5L1.5 3C1.5 2.5 2 2.25 2.5 2.5ZM14 12.25L2.5 14.5L14 12.25Z"/>
+                            </svg>
+                            </button>
+                        </span>
+                        </div>
                     </form>
                 </div>
 
                 {/* Column 2 */}
                 <div className="space-y-4">
                     <h3 className="text-lg font-bold">Support</h3>
-                    <p className="text-sm">111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</p>
-                    <p className="text-sm">exclusive@gmail.com</p>
-                    <p className="text-sm">+88015-88888-9999</p>
+                    <p className="text-sm">GEC Circle, Chattogram</p>
+                    <p className="text-sm">octad@gmail.com</p>
+                    <p className="text-sm">+88012-0000-9999</p>
                 </div>
 
                 {/* Column 3 */}
