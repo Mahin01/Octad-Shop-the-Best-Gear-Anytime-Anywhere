@@ -9,6 +9,7 @@ import My_Account from "../pages/My Account/My_Account";
 import Checkout from "../pages/Checkout/Checkout";
 import Cart from "../pages/Cart/Cart";
 import Error from "../pages/Error/Error";
+import WishList from "../pages/Wishlist/WishList";
 
 export const router = createBrowserRouter([
     {
@@ -50,6 +51,10 @@ export const router = createBrowserRouter([
         {
           path: "/error",
           element: <Error></Error>
+        },
+        {
+          path: "/wishlist",
+          element: <WishList></WishList>
         }
       ]},
   ]);
