@@ -76,7 +76,7 @@ const About = () => {
                 <div className="flex items-center justify-center gap-8 p-5 my-5">
                     {/* First Icon */}
                     <div id='team'>
-                        <div className="card bg-base-200 rounded-none">
+                        <div className="card bg-base-200">
                             <figure>
                                 <img className='w-64 h-96' src="image 46.png" alt="Shoes" />
                             </figure>
@@ -94,7 +94,7 @@ const About = () => {
                     </div>
                     {/* Center Card */}
                     <div id='team'>
-                        <div className="card bg-base-200 rounded-none">
+                        <div className="card bg-base-200">
                             <figure>
                                 <img className='w-64 h-96' src="image 51.png" alt="Shoes" />
                             </figure>
@@ -112,7 +112,7 @@ const About = () => {
                     </div>
                     {/* Third Icon */}
                     <div id='team'>
-                        <div className="card bg-base-200 rounded-none">
+                        <div className="card bg-base-200">
                             <figure>
                                 <img className='w-64 h-96' src="image 47.png" alt="Shoes" />
                             </figure>
