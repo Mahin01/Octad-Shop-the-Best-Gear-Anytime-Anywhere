@@ -8,7 +8,7 @@ const Product_Details = () => {
     const handleDecrement = () => setValue((prev) => (prev > 0 ? prev - 1 : 0));
     return (
         <>
-           <div className="max-w-screen-xl mx-auto h-auto">
+           <div className="max-w-screen-xl mx-auto h-auto my-12">
                 <div className="flex items-start my-5 gap-5">
                     <div className="flex flex-col items-center">
                         <div className="space-y-2">
@@ -110,7 +110,7 @@ const Product_Details = () => {
                     </div>
                 </div>
                 {/* Description & Rating Tab group */}
-                <div role="tablist" className="tabs tabs-lifted my-5">
+                <div role="tablist" className="tabs tabs-lifted my-12">
                     <input type="radio" name="my_tabs_2" role="tab" className="tab text-xl text-semibold whitespace-nowrap w-full text-center" aria-label="Product Description" />
                     <div role="tabpanel" className="tab-content border-base-300 p-6"> 
                     The iPhone 13 Pro Max features a 6.7-inch Super Retina XDR display with ProMotion (120Hz refresh rate) and is powered by the A15 Bionic chip for exceptional performance. It has a triple 12MP camera system with Telephoto, Wide, and Ultra Wide lenses, offering features like Night Mode and Cinematic Mode. With a battery life of up to 28 hours of video playback, storage options ranging from 128GB to 1TB, and a surgical-grade stainless steel frame with Ceramic Shield, it is both durable and stylish. The device is water and dust-resistant (IP68) and comes in Graphite, Gold, Silver, Sierra Blue, and Alpine Green, running iOS 15 (upgradeable). </div>
