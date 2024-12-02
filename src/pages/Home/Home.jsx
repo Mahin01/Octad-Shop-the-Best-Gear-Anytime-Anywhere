@@ -3,6 +3,7 @@ import SideBar from '../shared/SideBar/SideBar';
 import Banner from '../shared/Banner/Banner';
 import "./Home.css";
 import ProductCarousel from '../shared/Flash_Sales/Flash_Product';
+import Catergory_Sort from '../shared/Category_Sort/Catergory_Sort';
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
                 <Banner></Banner>
             </div>
                 <ProductCarousel></ProductCarousel>
+                <Catergory_Sort></Catergory_Sort>
         </div>
     );
 };
