@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -36,11 +37,11 @@ const Footer = () => {
                 <div className="space-y-4">
                     <h3 className="text-lg font-bold">Account</h3>
                     <ul className="space-y-2 text-sm">
-                    <li>My Account</li>
-                    <li>Login / Register</li>
-                    <li>Cart</li>
-                    <li>Wishlist</li>
-                    <li>Shop</li>
+                        <li><Link className='hover:underline' to={"/My_account"}>My Account</Link></li>
+                        <li><Link className='hover:underline' to={"/login"}>Login</Link> / <Link className='hover:underline' to={"/register"}>Register</Link></li>
+                        <li><Link className='hover:underline' to={"/cart"}>Cart</Link></li>
+                        <li><Link className='hover:underline' to={"/wishlist"}>Wishlist</Link></li>
+                        <li><Link className='hover:underline' to={"/shop"}>Shop</Link></li>
                     </ul>
                 </div>
 
@@ -48,10 +49,10 @@ const Footer = () => {
                 <div className="space-y-4">
                     <h3 className="text-lg font-bold">Quick Link</h3>
                     <ul className="space-y-2 text-sm">
-                    <li>Privacy Policy</li>
-                    <li>Terms Of Use</li>
-                    <li>FAQ</li>
-                    <li>Contact</li>
+                        <li><Link className='hover:underline' to={"/privacy-policy"}>Privacy Policy</Link></li>
+                        <li><Link className='hover:underline' to={"/terms-of-policy"}>Terms Of Policy</Link></li>
+                        <li><Link className='hover:underline' to={"/faq"}>FAQ</Link></li>
+                        <li><Link className='hover:underline' to={"/contact"}>Contact</Link></li>
                     </ul>
                 </div>
 
