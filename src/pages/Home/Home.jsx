@@ -1,9 +1,9 @@
 import React from 'react';
-import SideBar from '../shared/SideBar/SideBar';
-import Banner from '../shared/Banner/Banner';
+import SideBar from './SideBar/SideBar';
+import Banner from './Banner/Banner';
 import "./Home.css";
-import ProductCarousel from '../shared/Flash_Sales/Flash_Product';
-import Catergory_Sort from '../shared/Category_Sort/Catergory_Sort';
+import ProductCarousel from './Flash_Sales/Flash_Product';
+import Catergory_Sort from './Category_Sort/Catergory_Sort';
 import Best_Selling from './Best_Selling/Best_Selling';
 import Products_Showcase from './Products Showcase/Products_Showcase';
 import New_Arrival from './New_Arrival/New_Arrival';
