@@ -7,6 +7,7 @@ import Catergory_Sort from '../shared/Category_Sort/Catergory_Sort';
 import Best_Selling from './Best_Selling/Best_Selling';
 import Products_Showcase from './Products Showcase/Products_Showcase';
 import New_Arrival from './New_Arrival/New_Arrival';
+import Service from './Service/Service';
 
 const Home = () => {
     return (
@@ -20,6 +21,7 @@ const Home = () => {
                 <Best_Selling></Best_Selling>
                 <Products_Showcase></Products_Showcase>
                 <New_Arrival></New_Arrival>
+                <Service></Service>
         </div>
     );
 };

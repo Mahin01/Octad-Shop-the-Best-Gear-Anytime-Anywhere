@@ -3,7 +3,11 @@ import React from 'react';
 const New_Arrival = () => {
     return (
         <>
-           <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 text-white p-8">
+        <section className='my-12'>
+            <div className="section_title">
+                <h2 className="text-3xl font-bold my-5">New Arrivals</h2>
+            </div>
+           <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 text-white">
                 {/* <!-- PlayStation 5 Section --> */}
                 <div class="relative flex items-end  rounded-lg overflow-hidden h-[420px]">
                     <img
@@ -74,7 +78,8 @@ const New_Arrival = () => {
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
+        </section> 
         </>
     );
 };
