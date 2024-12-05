@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProductCarousel = () => {
+const FlashProduct = () => {
   const products = [
     { id: 1, name: "Logitech f310 Game Controller", price: 120, discount: "40%", rating: 5, img: "logitech-f310-GC.webp" },
     { id: 2, name: "iPhone 13 Pro Max", price: 960, discount: "35%", rating: 4, img: "iPhone_13_pro_max.jpg" },
@@ -89,4 +89,4 @@ const ProductCarousel = () => {
   );
 };
 
-export default ProductCarousel;
+export default FlashProduct;

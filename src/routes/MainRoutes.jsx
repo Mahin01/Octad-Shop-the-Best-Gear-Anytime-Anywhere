@@ -11,6 +11,7 @@ import Cart from "../pages/Cart/Cart";
 import Error from "../pages/Error/Error";
 import WishList from "../pages/Wishlist/WishList";
 import Product_Details from "../pages/Product_details/Product_Details";
+import Shop from "../pages/Shop/Shop";
 
 export const router = createBrowserRouter([
     {
@@ -36,6 +37,10 @@ export const router = createBrowserRouter([
         {
           path: "/contact",
           element: <Contact></Contact>
+        },
+        {
+          path: "/shop",
+          element: <Shop></Shop>
         },
         {
           path: "/My_account",

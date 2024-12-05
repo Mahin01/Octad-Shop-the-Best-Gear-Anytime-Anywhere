@@ -15,11 +15,11 @@ const NavMenu = () => {
                         </label>
                         {/* Dropdown Menu */}
                         <ul className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><Link to={"/"}>Home</Link></li>
-                            <li><Link to={"/shop"}>Shop</Link></li>
-                            <li><Link to={"/contact"}>Contact</Link></li>
-                            <li><Link to={"/about"}>About</Link></li>
-                            <li><Link href={"/register"}>Register</Link></li>
+                            <li><Link className='hover:bg-transparent hover:text-primary' to={"/"}>Home</Link></li>
+                            <li><Link className='hover:bg-transparent hover:text-primary' to={"/shop"}>Shop</Link></li>
+                            <li><Link className='hover:bg-transparent hover:text-primary' to={"/contact"}>Contact</Link></li>
+                            <li><Link className='hover:bg-transparent hover:text-primary' to={"/about"}>About</Link></li>
+                            <li><Link className='hover:bg-transparent hover:text-primary' href={"/register"}>Register</Link></li>
                         </ul>
                     </div>
 
@@ -30,11 +30,11 @@ const NavMenu = () => {
                 {/* Navbar Links for Larger Screens */}
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        <li><Link to={"/"}>Home</Link></li>
-                        <li><Link to={"/shop"}>Shop</Link></li>
-                        <li><Link to={"/contact"}>Contact</Link></li>
-                        <li><Link to={"/about"}>About</Link></li>
-                        <li><Link href={"/register"}>Register</Link></li>
+                        <li><Link className='hover:bg-transparent hover:text-primary' to={"/"}>Home</Link></li>
+                        <li><Link className='hover:bg-transparent hover:text-primary' to={"/shop"}>Shop</Link></li>
+                        <li><Link className='hover:bg-transparent hover:text-primary' to={"/contact"}>Contact</Link></li>
+                        <li><Link className='hover:bg-transparent hover:text-primary' to={"/about"}>About</Link></li>
+                        <li><Link className='hover:bg-transparent hover:text-primary' href={"/register"}>Register</Link></li>
                     </ul>
                 </div>
 
