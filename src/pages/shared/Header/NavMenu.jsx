@@ -19,7 +19,7 @@ const NavMenu = () => {
                             <li><Link className='hover:bg-transparent hover:text-primary' to={"/shop"}>Shop</Link></li>
                             <li><Link className='hover:bg-transparent hover:text-primary' to={"/contact"}>Contact</Link></li>
                             <li><Link className='hover:bg-transparent hover:text-primary' to={"/about"}>About</Link></li>
-                            <li><Link className='hover:bg-transparent hover:text-primary' href={"/register"}>Register</Link></li>
+                            <li><Link className='hover:bg-transparent hover:text-primary' to={"/signup"}>Register</Link></li>
                         </ul>
                     </div>
 
@@ -34,7 +34,7 @@ const NavMenu = () => {
                         <li><Link className='hover:bg-transparent hover:text-primary' to={"/shop"}>Shop</Link></li>
                         <li><Link className='hover:bg-transparent hover:text-primary' to={"/contact"}>Contact</Link></li>
                         <li><Link className='hover:bg-transparent hover:text-primary' to={"/about"}>About</Link></li>
-                        <li><Link className='hover:bg-transparent hover:text-primary' href={"/register"}>Register</Link></li>
+                        <li><Link className='hover:bg-transparent hover:text-primary' to={"/signup"}>Register</Link></li>
                     </ul>
                 </div>
 
@@ -72,7 +72,7 @@ const NavMenu = () => {
                             <span className="text-lg font-bold">8 Items</span>
                             <span className="text-info">Subtotal: $999</span>
                             <div className="card-actions">
-                                <button className="btn btn-primary btn-block">View cart</button>
+                                <Link to={"/cart"} lassName="btn btn-primary btn-block">View cart</Link>
                             </div>
                             </div>
                         </div>
@@ -88,10 +88,10 @@ const NavMenu = () => {
                     <ul
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                         <li>
-                        <a className="justify-between">
+                        <Link to={"/My_Account"} className="justify-between">
                             Profile
                             <span className="badge">New</span>
-                        </a>
+                        </Link>
                         </li>
                         <li><a>Settings</a></li>
                         <li><a>Logout</a></li>
