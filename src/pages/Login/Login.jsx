@@ -1,7 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import "./Login.css";
+import { AuthContext } from '../../Providers/AuthProviders';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const Login = () => {
+    const {user, userSignIn} = useContext(AuthContext);
+    const navigate = useNavigate();
+
+    const handleSignIn = event => {
+        event.preventDefault();
+        const form = event.target;
+        const mail = form.email.value;
+        const password = form.pwd.value;
+        userSignIn(mail, password)
+        .then(result => {
+            const user = result.user;
+            navigate("/");
+        }); 
+    }
+
     return (
         <>
             <div className="hero-content flex lg:justify-between pl-0 h-auto">
@@ -11,7 +28,7 @@ const Login = () => {
                 <div className="w-full max-w-sm">
                     <h1 className="text-5xl mb-5">Log in to Octad</h1>
                     <p className='mb-10'>Enter your credentials below</p>
-                    <form>
+                    <form onSubmit={handleSignIn}>
                         <div className="form-control mb-5">
                         <label className="input input-bordered flex items-center gap-2">
                             <svg
@@ -24,7 +41,7 @@ const Login = () => {
                                 <path
                                 d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
                             </svg>
-                            <input type="text" className="grow" placeholder="Email" />
+                            <input type="text" className="grow" name='email' placeholder="Email" />
                         </label>
                         </div>
                         <div className="form-control mb-5">
@@ -39,11 +56,11 @@ const Login = () => {
                                 d="M14 6a4 4 0 0 1-4.899 3.899l-1.955 1.955a.5.5 0 0 1-.353.146H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2.293a.5.5 0 0 1 .146-.353l3.955-3.955A4 4 0 1 1 14 6Zm-4-2a.75.75 0 0 0 0 1.5.5.5 0 0 1 .5.5.75.75 0 0 0 1.5 0 2 2 0 0 0-2-2Z"
                                 clipRule="evenodd" />
                             </svg>
-                            <input type="password" className="grow" value="password" />
+                            <input type="password" name='pwd' className="grow" placeholder="password" />
                         </label>
                         </div>
                         <div className="mt-6">
-                            <button className="btn bg-slate-950 text-white hover:bg-black">Login</button>
+                            <button type='submit' className="btn bg-slate-950 text-white hover:bg-black">Login</button>
                         </div>
                     </form>
                 </div>
