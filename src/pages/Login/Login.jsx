@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import "./Login.css";
 import { AuthContext } from '../../Providers/AuthProviders';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const {user, userSignIn} = useContext(AuthContext);
@@ -59,8 +59,16 @@ const Login = () => {
                             <input type="password" name='pwd' className="grow" placeholder="password" />
                         </label>
                         </div>
-                        <div className="mt-6">
-                            <button type='submit' className="btn bg-slate-950 text-white hover:bg-black">Login</button>
+                        <div className="flex justify-between my-5">
+                            <div className="submit-btn">
+                                <button type='submit' className="btn bg-slate-950 text-white hover:bg-black">Login</button>
+                            </div>
+                            <div className="flex items-center forgot-link">
+                                <Link to={"/forgot-password"} className="text-lg text-red-500 hover:underline">Forgot Password?</Link>
+                            </div>
+                        </div>
+                        <div className="signup-link">
+                            <p className="text-lg">Already have a account? <Link to={"/signup"} className='hover:underline'>Click here!</Link></p>
                         </div>
                     </form>
                 </div>
