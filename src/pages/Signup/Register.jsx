@@ -4,7 +4,22 @@ import { AuthContext } from '../../Providers/AuthProviders';
 import { Link } from 'react-router-dom';
 
 const Register = () => {
+    const {user, createUser} = useContext(AuthContext);
 
+    const userSignUp = event => {
+        event.preventDefault();
+        const form = event.target;
+        const firstName = form.fname.value;
+        const lastName = form.lname.value;
+        const email = form.mail.value;
+        const password = form.pwd.value;
+        createUser(email, password)
+        .then(result => {
+            const user = result.user;
+            console.log(user);
+            form.reset();
+        })
+    }
     return (
         <>
            <div className="hero-content flex lg:justify-between pl-0 h-auto">
@@ -14,7 +29,7 @@ const Register = () => {
                 <div className="w-full max-w-sm">
                     <h1 className="text-5xl mb-5">Create an account</h1>
                     <p className='mb-10'>Enter your credentials below</p>
-                    <form>
+                    <form onSubmit={userSignUp}>
                         <div className="form-control mb-5">
                             <label className="input input-bordered flex items-center gap-2">
                                 <svg
