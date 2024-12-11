@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const NavMenu = () => {
+
     return (
         <>
             <div className="navbar bg-base-100 max-w-screen-xl mx-auto">

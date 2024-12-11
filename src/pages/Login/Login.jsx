@@ -68,7 +68,7 @@ const Login = () => {
                             </div>
                         </div>
                         <div className="signup-link">
-                            <p className="text-lg">Already have a account? <Link to={"/signup"} className='hover:underline'>Click here!</Link></p>
+                            <p className="text-lg">Already have a account? <Link to={"/signup"} className='underline'>Click here!</Link></p>
                         </div>
                     </form>
                 </div>
