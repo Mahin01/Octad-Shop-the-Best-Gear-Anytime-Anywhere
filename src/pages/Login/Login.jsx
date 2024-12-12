@@ -4,7 +4,7 @@ import { AuthContext } from '../../Providers/AuthProviders';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 
 const Login = () => {
-    const {user, userSignIn} = useContext(AuthContext);
+    const {user, userSignIn, googleLogin} = useContext(AuthContext);
     const navigate = useNavigate();
 
     const handleSignIn = event => {
@@ -17,6 +17,14 @@ const Login = () => {
             const user = result.user;
             navigate("/");
         }); 
+    }
+
+    const googleSignIn = () => {
+        googleLogin()
+        .then(result => {
+            const user = result.user;
+            console.log(user);
+        })
     }
 
     return (
@@ -64,13 +72,16 @@ const Login = () => {
                                 <button type='submit' className="btn bg-slate-950 text-white hover:bg-black">Login</button>
                             </div>
                             <div className="flex items-center forgot-link">
-                                <Link to={"/forgot-password"} className="text-lg text-red-500 hover:underline">Forgot Password?</Link>
+                                <Link to={"/forgot-password"} className="text-lg underline">Forgot Password?</Link>
                             </div>
                         </div>
-                        <div className="signup-link">
-                            <p className="text-lg">Already have a account? <Link to={"/signup"} className='underline'>Click here!</Link></p>
-                        </div>
                     </form>
+                    <div className="form-control my-5">
+                        <button onClick={googleSignIn} className="btn google-login-btn hover">Login With Google</button>
+                    </div>
+                    <div className="signup-link">
+                        <p className="text-lg">Already have a account? <Link to={"/signup"} className='underline'>Click here!</Link></p>
+                    </div>
                 </div>
             </div>
         </>
