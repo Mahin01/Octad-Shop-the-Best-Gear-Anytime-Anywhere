@@ -25,6 +25,9 @@ const AuthProviders = ({children}) => {
     return signInWithEmailAndPassword(auth, email, password);
    }
 
+   const pwdChange = (email) => {
+    return sendPasswordResetEmail(auth, email);
+   }
 
    const googleLogin = () => {
     return signInWithPopup(auth, provider);
@@ -53,6 +56,7 @@ const AuthProviders = ({children}) => {
     createUser,
     emailVerify,
     userSignIn,
+    pwdChange,
     googleLogin,
     logoutUser
    }

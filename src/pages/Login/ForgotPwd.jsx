@@ -2,6 +2,19 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProviders';
 
 const ForgotPwd = () => {
+    const {pwdChange} = useContext(AuthContext);
+
+    const handlePwdReset = event => {
+        event.preventDefault();
+        const form = event.target;
+        const mail = form.email.value;
+        pwdChange(mail)
+        .then(result => {
+            const msg = result;
+            console.log(msg);
+            form.reset();
+        })
+    }
 
     return (
         <>
@@ -12,7 +25,7 @@ const ForgotPwd = () => {
                 <div className="w-full max-w-sm">
                     <h1 className="text-5xl mb-5">Reset Password</h1>
                     <p className='mb-10'>Enter your email below to reset your password</p>
-                    <form>
+                    <form onSubmit={handlePwdReset}>
                         <div className="form-control mb-5">
                         <label className="input input-bordered flex items-center gap-2">
                             <svg
