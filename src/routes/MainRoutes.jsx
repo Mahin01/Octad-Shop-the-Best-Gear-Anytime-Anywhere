@@ -12,6 +12,7 @@ import Error from "../pages/Error/Error";
 import WishList from "../pages/Wishlist/WishList";
 import Product_Details from "../pages/Product_details/Product_Details";
 import Shop from "../pages/Shop/Shop";
+import ForgotPwd from "../pages/Login/ForgotPwd";
 
 export const router = createBrowserRouter([
     {
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
         {
           path: "/login",
           element: <Login></Login>
+        },
+        {
+          path: "/reset-password",
+          element: <ForgotPwd></ForgotPwd>
         },
         {
           path: "/signup",

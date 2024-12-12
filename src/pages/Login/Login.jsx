@@ -72,7 +72,7 @@ const Login = () => {
                                 <button type='submit' className="btn bg-slate-950 text-white hover:bg-black">Login</button>
                             </div>
                             <div className="flex items-center forgot-link">
-                                <Link to={"/forgot-password"} className="text-lg underline">Forgot Password?</Link>
+                                <Link to={"/reset-password"} className="text-lg underline">Forgot Password?</Link>
                             </div>
                         </div>
                     </form>
