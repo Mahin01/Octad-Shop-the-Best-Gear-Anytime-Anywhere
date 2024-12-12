@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, sendEmailVerification, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut } from 'firebase/auth';
 import { createContext } from 'react';
 import app from '../Configs/Firebase/firebase.config';
+import useAxiosPublic from '../Hooks/useAxiosPublic';
 
 
 export const AuthContext = createContext(null);
@@ -12,6 +13,7 @@ const auth = getAuth(app);
 const AuthProviders = ({children}) => {
    const [user, setUser] = useState(null);
    const provider = new GoogleAuthProvider();
+   const axiosPublic = useAxiosPublic();
 
    const createUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
