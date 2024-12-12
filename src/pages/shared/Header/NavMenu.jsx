@@ -1,8 +1,17 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../../Providers/AuthProviders';
 
 const NavMenu = () => {
+    const {logoutUser} = useContext(AuthContext);
+    const navigate = useNavigate();
 
+    const handleLogout = () => {
+        logoutUser()
+        .then(result => {
+            navigate("/login");
+        })
+    }
     return (
         <>
             <div className="navbar bg-base-100 max-w-screen-xl mx-auto">
@@ -95,7 +104,7 @@ const NavMenu = () => {
                         </Link>
                         </li>
                         <li><a>Settings</a></li>
-                        <li><a>Logout</a></li>
+                        <li><button type='submit' onClick={handleLogout}>Logout</button></li>
                     </ul>
                     </div>
                 </div>
