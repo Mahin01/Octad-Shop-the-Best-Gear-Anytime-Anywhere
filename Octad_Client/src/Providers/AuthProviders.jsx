@@ -12,6 +12,7 @@ const auth = getAuth(app);
 const AuthProviders = ({children}) => {
    const [user, setUser] = useState(null);
    const provider = new GoogleAuthProvider();
+   
 
    const createUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
@@ -41,8 +42,20 @@ const AuthProviders = ({children}) => {
     const unsubscribe = onAuthStateChanged(auth, currentUser => {
         setUser(currentUser);
         if (currentUser) {
-            const user = currentUser;
-            console.log(user);
+            // get token and store client
+            const userInfo = { email: currentUser.email };
+            axiosPublic.post('/jwt', userInfo)
+                .then(res => {
+                    if (res.data.token) {
+                        localStorage.setItem('access-token', res.data.token);
+                        setLoading(false);
+                    }
+                })
+        }
+        else {
+            // TODO: remove token (if token stored in the client side: Local storage, caching, in memory)
+            localStorage.removeItem('access-token');
+            setLoading(false);
         }
     });
         return () => {
