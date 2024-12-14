@@ -13,6 +13,7 @@ import WishList from "../pages/Wishlist/WishList";
 import Product_Details from "../pages/Product_details/Product_Details";
 import Shop from "../pages/Shop/Shop";
 import ForgotPwd from "../pages/Login/ForgotPwd";
+import Payment_Method from "../pages/My Account/Payment_Method";
 
 export const router = createBrowserRouter([
     {
@@ -50,6 +51,10 @@ export const router = createBrowserRouter([
         {
           path: "/My_Account",
           element: <My_Account></My_Account>
+        },
+        {
+          path: "/My_Account/Payment_Method",
+          element: <Payment_Method></Payment_Method>
         },
         {
           path: "/checkout",
