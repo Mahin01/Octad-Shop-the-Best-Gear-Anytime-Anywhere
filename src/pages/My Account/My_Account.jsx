@@ -1,38 +1,12 @@
 import React from 'react';
+import Profile_Menu from './Profile_Menu';
 
 const My_Account = () => {
     return (
         <div className="hero min-h-screen">
             <div className="hero-content flex flex-row gap-4 items-start w-full my-5">
                 {/* Menu (On the Left) */}
-                <aside className="w-1/4 p-4">
-                    <div className="manage_account mb-5">
-                        <h2 className="text-lg font-bold mb-2">Manage My Account</h2>
-                        <ul className="space-y-2">
-                            <li>
-                                <a href="#" className="text-gray-700 hover:underline">My Profile</a>
-                            </li>
-                            <li>
-                                <a href="#" className="text-gray-700 hover:underline">Payment Method</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div className="manage_orders mb-5">
-                        <h2 className="text-lg font-bold mb-2">Manage Orders</h2>
-                        <ul className="space-y-2">
-                            <li>
-                                <a href="#" className="text-gray-700 hover:underline">My Returns</a>
-                            </li>
-                            <li>
-                                <a href="#" className="text-gray-700 hover:underline">My Cancellations</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div className="manage_wishlist">
-                        <a href="#" className="font-bold text-lg hover:underline">My Wishlist</a>
-                    </div>
-                </aside>
-
+                <Profile_Menu></Profile_Menu>
                 {/* Card Content */}
                 <main className="flex-1 bg-white p-8 border shadow-sm rounded-lg">
                     <h2 className="text-xl mb-5 font-bold">Edit Your Profile Info</h2>
